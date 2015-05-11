@@ -2,12 +2,16 @@
 <head>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+	<meta id="viewport" name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
 </head>
 <body class="container-fluid">
-<h1>Cordova demo</h1>
+<div class="jumbotron">
+	<h1>Cordova demo</h1>
+</div>
 
 <div id="step0">
-	<h3>Device plugin</h3>
+	<h2>Device plugin</h2>
 	<div>
 		<div id="info-1"></div>
 		<div id="info-2"></div>
@@ -15,40 +19,58 @@
 		<div id="info-4"></div>
 		<div id="info-5"></div>
 	</div>
-	<button onclick="nextStep(1)">Next</button>
+	<button class="btn btn-primary" onclick="nextStep(1)">Next</button>
 </div>
 
 <div id="step1" class="hidden">
-	<h3>Device2 plugin</h3>
-	<div>sa
+	<h3>Camera plugin</h3>
+	<div style="height: 200px;">
+		<img src="" id="myImage" class="col-xs-12"/>
 	</div>
-	<button onclick="nextStep(2)">Next</button>
+	<br/>
+	<div class="col-xs-6 center-block" style="text-align: center;">
+		<button class="btn btn-info"  onclick="takePicture()">Take a picture!</button>
+	</div>
+	<div class="col-xs-6 center-block" style="text-align: center;">
+		<button class="btn btn-primary"  onclick="nextStep(2)">Next</button>
+	</div>
 </div>
 
-<div id="step2" class="hidden">
-	<h3>Device3 plugin</h3>
-	<div>sa
+<div id="step2" class="col-xs-12 hidden">
+	<h3>Contacts plugin</h3>
+	<div class="input-group">
+		<input type="text" id="contactSearch" class="form-control"/>
+		<span class="input-group-btn">
+			<button class="btn btn-warning" type="button" onclick="readContacts()">Search</button>
+		</span>
 	</div>
-	<button onclick="nextStep(3)">Next</button>
+	<div id="contactsFound"></div>
+	<div >
+		<ul id="contacts"></ul>
+	</div>
+	<br/>
+	<button class="btn btn-primary" onclick="pickContact()">Pick a contact</button>
+	<br/>
+	<button class="btn btn-primary" onclick="nextStep(3)">Next</button>
 </div>
 
 <div id="step3" class="hidden">
 	<h3>Device4 plugin</h3>
 	<div>sa
 	</div>
-	<button onclick="nextStep(4)">Next</button>
+	<button class="btn btn-primary"  onclick="nextStep(4)">Next</button>
 </div>
 
 <div id="step4" class="hidden">
 	<h3>Device5 plugin</h3>
 	<div>sa
 	</div>
-	<button onclick="nextStep(0)">Again</button>
+	<button class="btn btn-primary"  onclick="nextStep(0)">Again</button>
 </div>
 
 
 
 </body>
-<!--<script type="text/javascript" src="cordova.js"></script>-->
+<script type="text/javascript" src="cordova.js"></script>
 <script src="js/index.js"></script>
 </html>

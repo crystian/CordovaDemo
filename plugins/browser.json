@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -22,6 +26,15 @@
             "PACKAGE_NAME": "net.crystian.cordovaDemo"
         },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "net.crystian.cordovaDemo"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "net.crystian.cordovaDemo"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "net.crystian.cordovaDemo"
+        },
+        "cordova-plugin-contacts": {
             "PACKAGE_NAME": "net.crystian.cordovaDemo"
         }
     },
