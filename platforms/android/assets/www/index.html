@@ -3,14 +3,17 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
 	<meta id="viewport" name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
 
 </head>
 <body class="container-fluid">
+<br/>
 <div class="jumbotron">
 	<h1>Cordova demo</h1>
 </div>
 
-<div id="step0">
+<div id="step0" class="col-xs-12">
 	<h2>Device plugin</h2>
 	<div>
 		<div id="info-1"></div>
@@ -22,7 +25,7 @@
 	<button class="btn btn-primary" onclick="nextStep(1)">Next</button>
 </div>
 
-<div id="step1" class="hidden">
+<div id="step1" class="col-xs-12 hidden">
 	<h3>Camera plugin</h3>
 	<div style="height: 200px;">
 		<img src="" id="myImage" class="col-xs-12"/>
@@ -51,26 +54,40 @@
 	<br/>
 	<button class="btn btn-primary" onclick="pickContact()">Pick a contact</button>
 	<br/>
+	<br/>
 	<button class="btn btn-primary" onclick="nextStep(3)">Next</button>
 </div>
 
-<div id="step3" class="hidden">
-	<h3>Device4 plugin</h3>
-	<div>sa
+<div id="step3" class="col-xs-12 hidden">
+	<h3>Globalization plugin</h3>
+	<div>
+		<div id="loc-1"></div>
+		<div id="loc-2"></div>
+		<div id="loc-3"></div>
 	</div>
-	<button class="btn btn-primary"  onclick="nextStep(4)">Next</button>
+	<br/>
+	<button class="btn btn-primary" onclick="showGlobalization()">Show globalization info</button>
+	<br/>
+	<br/>
+	<button class="btn btn-primary" onclick="nextStep(4)">Next</button>
 </div>
 
 <div id="step4" class="hidden">
-	<h3>Device5 plugin</h3>
-	<div>sa
+	<h3>Vibration plugin</h3>
+	<div class="input-group">
+		<input type="text" id="vibrationTime" class="form-control" placeholder="Milliseconds" value="500"/>
+		<span class="input-group-btn">
+			<button class="btn btn-warning" type="button" onclick="vibrate()">Vibrate!</button>
+		</span>
 	</div>
-	<button class="btn btn-primary"  onclick="nextStep(0)">Again</button>
+	<br/>
+	<button class="btn btn-primary" onclick="nextStep(0)">Again</button>
 </div>
 
 
 
 </body>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
 <script src="js/index.js"></script>
 </html>

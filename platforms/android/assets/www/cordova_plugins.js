@@ -248,6 +248,28 @@ module.exports = [
         "merges": [
             ""
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+        "id": "cordova-plugin-globalization.GlobalizationError",
+        "clobbers": [
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+        "id": "cordova-plugin-globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -257,7 +279,9 @@ module.exports.metadata =
     "cordova-plugin-device": "1.0.0",
     "cordova-plugin-camera": "1.0.0",
     "cordova-plugin-file": "2.0.0",
-    "cordova-plugin-contacts": "1.0.0"
+    "cordova-plugin-contacts": "1.0.0",
+    "cordova-plugin-globalization": "1.0.0",
+    "cordova-plugin-vibration": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

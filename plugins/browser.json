@@ -36,6 +36,12 @@
         },
         "cordova-plugin-contacts": {
             "PACKAGE_NAME": "net.crystian.cordovaDemo"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "net.crystian.cordovaDemo"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "net.crystian.cordovaDemo"
         }
     },
     "dependent_plugins": {}

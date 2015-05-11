@@ -6,6 +6,9 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function() {
+        //we get 300ms on touch responses
+        FastClick.attach(document.body);
+
         showDeviceInfo();
     }
 };
@@ -62,8 +65,10 @@ function readContacts(){
     var options      = new ContactFindOptions();
     options.filter   = document.getElementById('contactSearch').value;
     options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.id];
-    var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
+    var fields       = ['name'];
+
+    //just in case
+    if(options.filter.length === 0){return;}
 
     navigator.contacts.find(fields, function (contacts) {
         document.getElementById('contactsFound').innerHTML = 'Found ' + contacts.length + ' contacts.';
@@ -78,10 +83,11 @@ function readContacts(){
         }
 
         var el = document.getElementById('contacts');
+        el.innerHTML = '';
 
         for(var i = 0; i<contacts.length;i++){
             contact = contacts[i];
-            el.innerHTML += '<li>Name: '+ contact +'</li>';
+            el.innerHTML += '<li>Name: '+ contact.displayName +'</li>';
         }
         el.innerHTML += (flagMore ? '<li>more...</li>' : '');
 
@@ -98,3 +104,34 @@ function pickContact(){
     });
 }
 
+//globalization
+function showGlobalization(){
+    navigator.globalization.getPreferredLanguage(function (language) {
+        document.getElementById('loc-1').innerHTML = 'preferredLanguage: '+ language.value;
+    }, function () {
+        alert('error!')
+    });
+    navigator.globalization.getLocaleName(function (locale) {
+        document.getElementById('loc-2').innerHTML = 'localeName: '+ locale.value;
+    }, function () {
+        alert('error!')
+    });
+    navigator.globalization.getDatePattern(function (date) {
+        document.getElementById('loc-3').innerHTML = 'datePattern: '+ date.pattern;
+    }, function () {
+        alert('error!')
+    });
+
+}
+
+//vibration
+function vibrate(){
+    var v = document.getElementById('vibrationTime').value;
+
+    v = parseInt(v);
+    if(isNaN(v)){
+        v = 200;
+    }
+
+    navigator.vibrate(v);
+}
