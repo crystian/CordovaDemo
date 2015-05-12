@@ -283,6 +283,13 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
+        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -294,7 +301,8 @@ module.exports.metadata =
     "cordova-plugin-file": "2.0.0",
     "cordova-plugin-contacts": "1.0.0",
     "cordova-plugin-globalization": "1.0.0",
-    "cordova-plugin-vibration": "1.0.0"
+    "cordova-plugin-vibration": "1.0.0",
+    "cordova-plugin-barcodescanner": "0.7.0"
 }
 // BOTTOM OF METADATA
 });

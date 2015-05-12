@@ -20,12 +20,13 @@ div[1] = document.getElementById('step1');
 div[2] = document.getElementById('step2');
 div[3] = document.getElementById('step3');
 div[4] = document.getElementById('step4');
+div[5] = document.getElementById('step5');
 
 function nextStep(n){
     nPrev = n-1;
 
     if(n === 0){
-      nPrev = 4;
+      nPrev = 5;
     }
 
     div[nPrev].classList.add('hidden');
@@ -134,4 +135,17 @@ function vibrate(){
     }
 
     navigator.vibrate(v);
+}
+
+//barcode
+function scanBarcode(){
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            document.getElementById('barcode-1').innerHTML = 'Format: '+ result.format;
+            document.getElementById('barcode-2').innerHTML = 'Value: '+ result.text;
+        },
+        function (error) {
+            alert("Scanning failed: " + error);
+        }
+    );
 }

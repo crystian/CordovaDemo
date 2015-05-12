@@ -1,0 +1,663 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Grunt presentation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Grunt: The javascript task runner</h1>
+		<p>Automatizate!</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Grunt: <br>The javascript task runner</h2>
+		<p>by <a href="http://github.com/crystian">@Crystian</a></p>
+		<img src="pictures/jabali.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:-50px 0 0;
+				color:#FFF;
+				text-align:left;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+
+	<section class="slide" style="text-align: center"><div>
+		<img src="pictures/grunt-logo.svg" alt="" style="width: 200px;">
+		<h2>The javascript task runner</h2>
+		<p>Automatizacion de tareas, con el poder de Javascript & NodeJS</p>
+		<p class="note">Grunt: se pronuncia GrAnt</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Tecnologias similares</h2>
+		<ol>
+			<li>Make</li>
+			<li>Ant</li>
+			<li>Maven</li>
+			<li>Rake</li>
+			<li>Shell scripts</li>
+			<li>...</li>
+		</ol>
+	</div></section>
+
+	<section class="slide cover" id="noBuilder"><div>
+		<h2>BUILDERS... ?</h2>
+		<h2 class="next">"Front end" !== "BUILDERS"</h2>
+		<img src="" width="100%" height="100%" alt="">
+		<style>
+			#noBuilder h2 {
+				color:#FFF;
+			}
+			#noBuilder img{
+				background-image: url(pictures/maxresdefault.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide cover" id="noXML"><div>
+		<h2>XML</h2>
+		<img src="" width="100%" height="100%" alt="">
+		<style>
+			#noXML h2 {
+				color:#FFF;
+			}
+			#noXML img{
+				background-image: url(pictures/A-baby-cries-with-happiness-at-her-mothers-song-2652331.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+
+			}
+		</style>
+	</div></section>
+
+
+	<section class="slide" id="trioJS"><div>
+		<h2>GRUNT</h2>
+		<div style="text-align: center">
+			<img src="pictures/trioJS.jpg" width="75%"  alt="" class="next">
+		</div>
+	</div></section>
+	<section class="slide" id="trioJS2"><div>
+		<h2>GRUNT</h2>
+		<div style="text-align: center">
+			<img src="pictures/trioJS2.jpg" width="75%"  alt="">
+		</div>
+	</div></section>
+	<section class="slide" id="trioJS3"><div>
+		<h2>GRUNT</h2>
+		<div style="text-align: center">
+			<img src="pictures/trioJS2.jpg" width="75%"  alt="">
+			<img src="pictures/P7080039.gif" alt="" style="right: 200px; top: 400px; width: 100px; position:absolute;">
+		</div>
+	</div></section>
+
+
+	<section class="slide" id="quienes"><div>
+		<h2>Quienes lo usan?</h2>
+		<img src="pictures/quienes.jpg" width="100%"  alt="">
+		<p class="note">Mas info: <a href="http://gruntjs.com/who-uses-grunt">http://gruntjs.com/who-uses-grunt</a></p>
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>"Ok, pero... por qué rayos lo usaria yo?"</h2>
+	</div></section>
+
+	<section class="slide" id="stats"><div>
+		<h2>Tiempo vs tasks</h2>
+		<img src="pictures/timevstask.jpg" width="80%"  alt="">
+		<p class="note">Fuente: <a href="http://youtu.be/bntNYzCrzvE">Grunt JavaScript Automation for the Lazy Developer</a></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Features y usos</h2>
+		<ol>
+			<li>Building</li>
+			<li class="next">Watcher</li>
+			<li class="next">Server</li>
+			<li class="next">File transfer</li>
+			<li class="next">etc</li>
+		</ol>
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>"Ajam, contame con mas detalles"</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Grunt + plugins</h2>
+		<ul>
+			<li>Grunt</li>
+			<li>Git</li>
+			<li>Propios</li>
+		</ul>
+		<img src="pictures/grunt.gif" width="50%" alt="" style="position: absolute; right: 20px; top: 160px"/>
+		<p class="note">"&#9733; contrib-*" oficiales</p>
+	</div></section>
+
+
+	<section class="slide" id="uglify0"><div>
+		<h2>OFUSCADO/MINIFICADO</h2>
+		<div style="text-align: center">
+			<img src="pictures/uglify0.gif" width="100%"  alt="">
+		</div>
+	</div></section>
+	<section class="slide" id="uglify1"><div>
+		<h2>OFUSCADO/MINIFICADO</h2>
+		<div style="text-align: center">
+			<img src="pictures/uglify1.gif" width="90%"  alt="">
+		</div>
+	</div></section>
+	<section class="slide" id="uglify2"><div>
+		<h2>ULGIFY</h2>
+		<div style="text-align: center">
+			<img src="pictures/uglify2.gif" width="90%"  alt="">
+		</div>
+	</div></section>
+	<section class="slide" id="uglify3"><div>
+		<h2>ULGIFY</h2>
+		<div style="text-align: center">
+			<img src="pictures/uglify3.gif" width="90%"  alt="">
+		</div>
+	</div></section>
+	<section class="slide" id="uglify4"><div>
+		<h2>ULGIFY</h2>
+		<div style="text-align: center">
+			<img src="pictures/uglify4.gif" width="90%"  alt="">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li><b>Minify:</b> Uglify, CssMin, ImageMin, HtmlMin, ...</li>
+			<li class="next"><b>Preprocessors:</b> less, sass, scss, stylus, ...</li>
+			<li class="next"><b>Postprocessors:</b> autoprefixer...</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<ul>
+			<li><b>Minify:</b> Uglify, CssMin, ImageMin, HtmlMin, ...</li>
+			<li ><b>Preprocessors:</b> less, sass, scss, stylus, ...</li>
+			<li ><b>Postprocessors:</b> <mark>autoprefixer</mark>...</li>
+		</ul>
+	</div></section>
+
+	<section class="slide" id="prefixer0"><div>
+		<h2>CSS</h2>
+		<pre>
+			<code>.box {</code>
+			<code>	-webkit-border-radius: 10px;</code>
+			<code>	-moz-border-radius: 10px;</code>
+			<code>	-ms-border-radius: 10px;</code>
+			<code>	border-radius: 10px;</code>
+			<code>}</code>
+		</pre>
+		<style>
+			#prefixer0 code{
+				font-size: 24px;
+				line-height: 32px;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide" id="prefixer1"><div>
+		<h2>SASS/LESS (mixin)</h2>
+		<pre>
+			<code>@mixin border-radius($radius) {</code>
+			<code>	-webkit-border-radius: $radius;</code>
+			<code>	-moz-border-radius: $radius;</code>
+			<code>	-ms-border-radius: $radius;</code>
+			<code>	border-radius: $radius;</code>
+			<code>}</code>
+			<code>.box { @include border-radius(10px); }</code>
+			</code>
+		</pre>
+		<style>
+			#prefixer1 code{
+				font-size: 24px;
+				line-height: 32px;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide" id="prefixer2"><div>
+		<h2>Autoprefixer</h2>
+		<pre>
+			<code>.box {</code>
+			<code>	border-radius(10px);</code>
+			<code>}</code>
+		</pre>
+		<p >
+		<pre><code class="next small">
+browsers: ['ie 10', 'android 4', 'chrome 32', 'ff 27', 'ios 7', 'opera 19', 'safari 7']
+		</code></pre>
+		</p>
+		<p class="note next">Based in: <a href="http://caniuse.com/">Can I use</a></p>
+		<style>
+			#prefixer2 code{
+				font-size: 24px;
+				line-height: 32px;
+			}
+			#prefixer2 code.small{
+				font-size: 16px;
+				line-height: 32px;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li><b>Minify:</b> Uglify, CssMin, ImageMin, HtmlMin, ...</li>
+			<li ><b>Preprocessors:</b> less, sass, scss, stylus, ...</li>
+			<li ><b>Postprocessors:</b> autoprefixer, comments, loggers, devcode ... </li>
+			<li class="next"><b>Linters:</b> jslint, jshint, csshint, ... </li>
+			<li class="next"><b>Tests: </b> Karma, ...</li>
+			<li class="next"><b>Mas: </b> Replace, Copy, Move, Remove, , ...</li>
+			<li class="next"><b>Aun mas??</b> </li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li >Autoshots, base64, compress, </li>
+			<li class="next">SVN, SVNInfo, Bumpup, </li>
+			<li class="next">Server (nodeJs)</li>
+			<li class="next">Oversprite</li>
+			<li class="next">Shell</li>
+			<li class="next">Cordova, Weinre</li>
+			<li class="next">Watcher</li>
+			<li class="next">File transfer HD/LAN/FTP/SSH</li>
+			<li class="next"><b>Mucho mas</b></li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Instalacion & preparacion</h2>
+	</div></section>
+
+	<section class="slide" id="gruntfile0"><div>
+		<h2>Grunt instalation:</h2>
+		<p><code>npm install -g grunt-cli</code></p>
+		<p><code>npm install grunt --save-dev</code></p>
+		<p class="next note">Shortcut: "npm i grunt -D" (-S == --save)</p>
+	</div></section>
+
+	<section class="slide" id="gruntfile1"><div>
+		<h2>Agregando Uglify:</h2>
+		<p><code>npm i grunt-contrib-uglify --D</code></p>
+
+		<p class="next">Carpeta: node_modules</p>
+		<p class="next">Ideal: No subir al repo, ejecutar: <code>"npm i"</code></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Gruntfile.js & package.json</h2>
+		<p><b>Gruntfile.js:</b> Configuracion de Grunt, con definicion de tareas.</p>
+		<p><b>Package.json:</b> Configuracion de nodeJs, definicion de componentes/plugins instalados en el proyecto</p>
+	</div></section>
+
+	<section class="slide" id="package"><div>
+		<h2>Package.json (NodeJS)</h2>
+		<pre>
+			<code>{</code>
+			<code>    "name": "myJsProject",</code>
+			<code>    "version": "0.0.0",</code>
+			<code>    "description": "short description",</code>
+			<code>    "author": "me",</code>
+			<code>    "date": "2014-03-27 17:31:31 -03:00",</code>
+			<code>    "devDependencies": {,</code>
+			<code>        "grunt": "~0.4.2",</code>
+			<code>        "grunt-contrib-uglify": "~0.2.7"</code>
+			<code>    }</code>
+			<code>}</code>
+		</pre>
+		<p class="next note">Command: "npm init" wizard para la creacion de package.json</p>
+		<style>
+			#package code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide" id="gruntfilejs0"><div>
+		<h2>Gruntfile.js:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	grunt.initConfig({</code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>		uglify: {</code>
+			<code>			options: {</code>
+			<code>				banner: '/*! <%= pkg.name %>'</code>
+			<code>			},</code>
+			<code>			build: {</code>
+			<code>				src: 'src/<%= pkg.name %>.js',</code>
+			<code>				dest: 'build/<%= pkg.name %>.min.js'</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	});</code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs0 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs0 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs1"><div>
+		<h2>Require:</h2>
+		<pre>
+			<code><mark>module.exports = function(grunt) {</mark></code>
+			<code>	grunt.initConfig({</code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>		uglify: {</code>
+			<code>			options: {</code>
+			<code>				banner: '/*! <%= pkg.name %>'</code>
+			<code>			},</code>
+			<code>			build: {</code>
+			<code>				src: 'src/<%= pkg.name %>.js',</code>
+			<code>				dest: 'build/<%= pkg.name %>.min.js'</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	});</code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code><mark>};</mark></code>
+		</pre>
+		<style>
+			#gruntfilejs1 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs1 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs2"><div>
+		<h2>Wrapper:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	<mark>grunt.initConfig({</mark></code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>		uglify: {</code>
+			<code>			options: {</code>
+			<code>				banner: '/*! <%= pkg.name %>'</code>
+			<code>			},</code>
+			<code>			build: {</code>
+			<code>				src: 'src/<%= pkg.name %>.js',</code>
+			<code>				dest: 'build/<%= pkg.name %>.min.js'</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	<mark>});</mark></code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs2 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs2 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs3"><div>
+		<h2>ReadJSON:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	<mark>grunt.initConfig({</mark></code>
+			<code>		<mark class="important">pkg: grunt.file.readJSON('package.json'),</mark></code>
+			<code>		uglify: {</code>
+			<code>			options: {</code>
+			<code>				banner: '/*! <%= pkg.name %>'</code>
+			<code>			},</code>
+			<code>			build: {</code>
+			<code>				src: 'src/<%= pkg.name %>.js',</code>
+			<code>				dest: 'build/<%= pkg.name %>.min.js'</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	<mark>});</mark></code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs3 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs3 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs4"><div>
+		<h2>Task:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	<mark>grunt.initConfig({</mark></code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>        <mark class="important">uglify: {</mark></code>
+			<code>		<mark class="important">    options: {</mark></code>
+			<code>		<mark class="important">        banner: '/*! <%= pkg.name %>'</mark></code>
+			<code>		<mark class="important">    },</mark></code>
+			<code>		<mark class="important">    build: {</mark></code>
+			<code>		<mark class="important">        src: 'src/<%= pkg.name %>.js',</mark></code>
+			<code>		<mark class="important">        dest: 'build/<%= pkg.name %>.min.js'</mark></code>
+			<code>		<mark class="important">    }</mark></code>
+			<code>		<mark class="important">}</mark></code>
+			<code>	<mark>});</mark></code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs4 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs4 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs5"><div>
+		<h2>Target:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	<mark>grunt.initConfig({</mark></code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>		uglify: {</code>
+			<code>			options: {</code>
+			<code>				banner: '/*! <%= pkg.name %>'</code>
+			<code>			},</code>
+			<code>            <mark class="important">build: {</mark></code>
+			<code>			<mark class="important">    src: 'src/<%= pkg.name %>.js',</mark></code>
+			<code>			<mark class="important">    dest: 'build/<%= pkg.name %>.min.js'</mark></code>
+			<code>			<mark class="important">}</mark></code>
+			<code>		}</code>
+			<code>	<mark>});</mark></code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs5 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs5 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs6"><div>
+		<h2>Options:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	<mark>grunt.initConfig({</mark></code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>		uglify: {</code>
+			<code>            <mark class="important">options: {</mark></code>
+			<code>			<mark class="important">	banner: '/*! <%= pkg.name %>'</mark></code>
+			<code>			<mark class="important">},</mark></code>
+			<code>			build: {</code>
+			<code>				src: 'src/<%= pkg.name %>.js',</code>
+			<code>				dest: 'build/<%= pkg.name %>.min.js'</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	<mark>});</mark></code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs6 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs6 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+	<section class="slide gruntfilejs" id="gruntfilejs7"><div>
+		<h2>Template:</h2>
+		<pre>
+			<code>module.exports = function(grunt) {</code>
+			<code>	<mark>grunt.initConfig({</mark></code>
+			<code>		pkg: grunt.file.readJSON('package.json'),</code>
+			<code>		uglify: {</code>
+			<code>			options: {</code>
+			<code>				banner: <mark class="important">'/*! <%= pkg.name %>'</mark></code>
+			<code>			},</code>
+			<code>			build: {</code>
+			<code>				src: 'src/<%= pkg.name %>.js',</code>
+			<code>				dest: 'build/<%= pkg.name %>.min.js'</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	<mark>});</mark></code>
+			<code>	grunt.loadNpmTasks('grunt-contrib-uglify');</code>
+			<code>	grunt.registerTask('default', ['uglify']);</code>
+			<code>};</code>
+		</pre>
+		<style>
+			#gruntfilejs7 h2{
+				margin-bottom: 0;
+			}
+			#gruntfilejs7 code{
+				font-size: 24px;
+				line-height: 28px;
+			}
+		</style>
+	</div></section>
+
+
+	<section class="slide shout"><div>
+		<h2>Llego el momento:
+		<p class="next">Ejecucion</p></h2>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Grunt in action</h2>
+		<pre>
+			<p><code>grunt uglify</code></p>
+			<p class="next"><code>grunt uglify:build</code></p>
+			<p class="next"><code>grunt uglify:otroBuild</code></p>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Alias</h2>
+		<pre>
+			<p><code>grunt uglify:otroBuild</code> or <code>grunt b</code></p>
+		</pre>
+		<p>
+			<h2>
+				<b>Gruntfile.js</b>
+			</h2>
+			<pre><code>grunt.registerTask('b', ['uglify:otroBuild']);</code></pre>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Alias</h2>
+		<pre>
+			<p><code>grunt sassfixer</code></p>
+		</pre>
+		<p>
+			<h2>
+				<b>Gruntfile.js</b>
+			</h2>
+			<pre><code>grunt.registerTask('sassfixer', <br>     ['sass:build', 'autoprefixer:build']<br>);</code></pre>
+		</p>
+
+		<p class="note next">"Shorcut" or "concatenated tasks"</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Alias default</h2>
+		<pre>
+			<p><code>grunt</code></p>
+		</pre>
+		<p>
+			<h2>
+				<b>Gruntfile.js</b>
+			</h2>
+			<pre><code>grunt.registerTask('default', <br>     ['buildCSS', 'sassfixer']<br>);</code></pre>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Preguntas???</h2>
+		<ul>
+			<li>Cuando lo usaria?</li>
+			<li>Curva de aprendizaje?</li>
+			<li>El mejor trio: <a href="http://bower.io">Bower</a> y <a href="http://yeoman.io">Yeoman</a></li>
+			<li><b>Te toca!</b></li>
+
+			<li class="next">Twitter: <a href="https://twitter.com/crystian">@crystian</a></li>
+			<li class="next">Github: <a href="https://github.com/crystian">@crystian</a></li>
+		</ul>
+	</div></section>
+	<!--<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>-->
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

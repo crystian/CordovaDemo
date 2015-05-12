@@ -42,6 +42,9 @@
         },
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "net.crystian.cordovaDemo"
+        },
+        "cordova-plugin-barcodescanner": {
+            "PACKAGE_NAME": "net.crystian.cordovaDemo"
         }
     },
     "dependent_plugins": {}
