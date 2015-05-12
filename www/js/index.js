@@ -141,8 +141,8 @@ function vibrate(){
 function scanBarcode(){
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-            document.getElementById('barcode-1').innerHTML = 'Format: '+ result.format;
-            document.getElementById('barcode-2').innerHTML = 'Value: '+ result.text;
+            document.getElementById('barcode-1').innerHTML = 'Format: <b>'+ result.format +'</b>';
+            document.getElementById('barcode-2').innerHTML = 'Value: <b>'+ result.text +'</b>';
         },
         function (error) {
             alert("Scanning failed: " + error);
