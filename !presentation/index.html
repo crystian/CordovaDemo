@@ -6,8 +6,18 @@
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+	<style type="text/css">
+	.fontsizeh2{
+		font-size:60px !important;
+	}
+	</style>
 </head>
 <body class="list">
+
+	<section class="slide shout"><div>
+		<h2 class="fontsizeh2">Conectence a internet!<br><br>Wifi: globant-guest<br>User: globant-guest <br>Pass: globant-guest</h2>
+	</div></section>
+
 	<header class="caption">
 		<h1>Cordova / Phonegap</h1>
 		<p>No solo de nativos vive el mobile</p>
@@ -43,6 +53,16 @@
 		</style>
 	</div></section>
 
+
+	<section class="slide" style="text-align: center"><div>
+		<h2><span style="text-decoration: underline;">Hybrid</span></h2>
+		<p class="next">
+			<b>Concepto:</b> Es una manera de utilizar tecnologias web en devices como si se tratase de una applicacion nativa.
+		</p>
+		<p class="next">
+			<b>Tecnicamente:</b> Es el browser stock del device interpretando la web app (Single Page Application generalmente) y a la vez intefazeando con el hard dandonos acceso al devices, por ejemplo, usar la camara, leer sus contactos, etc..
+		</p>
+	</div></section>
 
 	<section class="slide cover" id="CoverCollage"><div>
 		<img src="pictures/collage.jpg" alt="">
@@ -101,34 +121,24 @@
 		</style>
 	</div></section>
 
-	<section class="slide" style="text-align: center"><div>
-		<h2><span style="text-decoration: underline;">Hybrid</span></h2>
-		<p class="next">
-			<b>Concepto:</b> Es una manera de utilizar tecnologias web en devices como si se tratase de una applicacion nativa.
-		</p>
-		<p class="next">
-			<b>Tecnicamente:</b> Es el browser stock del device interpretando la web app (Single Page Application generalmente) y a la vez intefazeando con el hard dandonos acceso al devices, por ejemplo, usar la camara, leer sus contactos, etc..
-		</p>
+	<section class="slide shout"><div>
+		<h2 class="fontsizeh2">"Pero como? es un sitio dentro del telefono?"</h2>
 	</div></section>
 
 	<section class="slide shout"><div>
-		<h2>"Pero como? es un sitio dentro del telefono?"</h2>
+		<h2 class="fontsizeh2">"Y si quiero usar features, tengo que hacerlo en otro lenguaje?"</h2>
 	</div></section>
 
 	<section class="slide shout"><div>
-		<h2>"Y si quiero usar features, tengo que hacerlo en otro lenguaje?"</h2>
+		<h2 class="fontsizeh2">"Para cuales plataformas puedo desarrollar?"</h2>
 	</div></section>
 
 	<section class="slide shout"><div>
-		<h2>"Para cuales plataformas puedo desarrollar?"</h2>
+		<h2 class="fontsizeh2">"Y que features puedo usar?"</h2>
 	</div></section>
 
 	<section class="slide shout"><div>
-		<h2>"Y que features puedo usar?"</h2>
-	</div></section>
-
-	<section class="slide shout"><div>
-		<h2>"En que plataforma puedo trabajar (workstation)?"</h2>
+		<h2 class="fontsizeh2">"En que plataforma puedo trabajar (workstation)?"</h2>
 	</div></section>
 
 	<section class="slide" id="resume"><div>
@@ -197,17 +207,16 @@
 		<h2>Cordova demo</h2>
 		<ul>
 			<li><a href="https://play.google.com/store/apps/details?id=net.crystian.cordovaDemo">https://play.google.com/store/apps/details?id=net.crystian.cordovaDemo</a></li>
-			<li class="next">Store: "cordova demo" (Author "Crystian")</li>
 			<li class="next">
 				<b>QR:</b>
 				<br/>
-				<img src="pictures/qr.jpg" alt="" style="width: 300px; margin-left: 250px;">
+				<img src="pictures/qrcode.cordova-app.png" alt="" style="width: 300px; margin-left: 250px;">
 			</li>
 		</ul>
 	</div></section>
 
 	<section class="slide" id="myMsg"><div>
-		<img src="pictures/qr2.png" alt="" style="width: 450px; margin-left: 150px;">
+		<img src="pictures/qrcode.bttf3.png" alt="" style="width: 450px; margin-left: 150px;">
 	</div></section>
 
 	<section class="slide" id="newVersion"><div>
@@ -252,7 +261,8 @@
 		<pre>
 			<code>
 				jarsigner -verbose -digestalg SHA1
-				"%FILENAME%-unsigned.apk" androidreleasekey
+				"%FILENAME%-release-unsigned.apk" 
+				 androidreleasekey
 				-sigalg MD5withRSA
 				-keystore release.keystore
 				-keypass %KEYPASS%
@@ -266,7 +276,7 @@
 		<pre>
 			<code>
 				jarsigner -verify
-				"%FILENAME%-unsigned.apk"
+				"%FILENAME%-release-unsigned.apk"
 				-keystore release.keystore
 			</code>
 		</pre>
@@ -277,7 +287,8 @@
 		<pre>
 			<code>
 				zipalign -v 4
-				"%FILENAME%-unsigned.apk" "%FILENAME%.apk"
+				"%FILENAME%-release-unsigned.apk" 
+				"%FILENAME%.apk"
 			</code>
 		</pre>
 	</div></section>
